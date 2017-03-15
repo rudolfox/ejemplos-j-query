@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <style>
+       #acordeon{
+        width: 400px;
+
+       }
+       .caja{
+        width: 800px;
+        height: 800px;
+        background-color: darkred;
+        border: solid 1px black;
+
+       }
+
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de JQueryUI</h1>
+    <h2>Ejemplo de Acordeon</h2>
+    <div id="acordeon">
+        <h3>Encabezado 1</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita consequatur ipsa, 
+                quasi in possimus nulla blanditiis repellendus perspiciatis quia dignissimos, illum 
+                magni modi voluptas minus excepturi animi voluptates, eum dolor./<p>
+        </div>
+
+        <h3>Encabezado 2</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita consequatur ipsa, 
+                quasi in possimus nulla blanditiis repellendus perspiciatis quia dignissimos, illum 
+                magni modi voluptas minus excepturi animi voluptates, eum dolor./<p>
+        </div>
+
+        <h3>Encabezado 3</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita consequatur ipsa, 
+                quasi in possimus nulla blanditiis repellendus perspiciatis quia dignissimos, illum 
+                magni modi voluptas minus excepturi animi voluptates, eum dolor./<p>
+        </div>
+    </div>
+    <h2>Ejemplo de pestañas</h2>
+    <div id="pestañas">
+        <ul>
+          <li><a href="#contenido1">Pestaña1</a></li>
+          <li><a href="#contenido2">Pestaña2</a></li>
+          <li><a href="#contenido3">Pestaña3</a></li>
+        </ul>
+
+
+        <div id="contenido1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+        </div>
+
+        <div id="contenido2">
+            <p>Eligendi vel iure modi laboriosam tenetur cupiditate repellendus
+                ex nihil officia nostrum. Molestiae sint perspiciatis earum expedita sunt nemo, quas omnis dicta.
+            </p>
+        </div>
+        
+        <div id="contenido3">
+            <p>Ejemplos con plugins en JQueryui</p>
+        </div>
+    </div>
+   <h3>Ejemplo Arrastrable</h3>
+    <div class="caja" id="limite">
+       <span id="arrastrable">
+           Arrastrame
+       </span>
+
+    </div>
+
+    <script> 
+      $(function(){
+
+          $('#acordeon').accordion()
+          $('#pestañas').tabs()
+          $('#arrastrable').draggable({
+
+              containment:"#limite"
+          })
+
+      })
+
+        
+    </script>
+
+</body>
+</html>
